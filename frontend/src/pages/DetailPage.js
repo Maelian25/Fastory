@@ -21,8 +21,6 @@ const DetailPage = () => {
           headers: { Authorization: `Bearer ${token}` },
         });
 
-        console.log(response.data.data);
-
         if (response.data) {
           setData(response.data.data);
         } else {

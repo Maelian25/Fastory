@@ -39,7 +39,7 @@ function StarshipDetail({ data }) {
         <strong>Classe de bolide:</strong> {data.starship_class}
       </p>
 
-      <h3>Pilots</h3>
+      <h3>Pilotes</h3>
       <ul>
         {data?.pilots?.length > 0 ? (
           data.pilots.map((pilotUrl, index) => <li key={index}>{pilotUrl.split("/").slice(-2, -1)[0]}</li>)
