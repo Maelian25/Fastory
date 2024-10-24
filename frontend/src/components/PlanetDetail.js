@@ -6,25 +6,25 @@ function PlanetDetail({ data }) {
     <div>
       <h2 className="detail-title">{data.name}</h2>
       <p>
-        <strong>Climate:</strong> {data.climate}
+        <strong>Climat:</strong> {data.climate}
       </p>
       <p>
-        <strong>Diameter:</strong> {data.diameter} km
+        <strong>Dimaètre:</strong> {data.diameter} km
       </p>
       <p>
-        <strong>Gravity:</strong> {data.gravity}
+        <strong>Gravité:</strong> {data.gravity}
       </p>
       <p>
-        <strong>Orbital Period:</strong> {data.orbital_period} days
+        <strong>Période orbitale:</strong> {data.orbital_period} days
       </p>
       <p>
         <strong>Population:</strong> {data.population}
       </p>
       <p>
-        <strong>Rotation Period:</strong> {data.rotation_period} hours
+        <strong>Période de rotation:</strong> {data.rotation_period} hours
       </p>
       <p>
-        <strong>Surface Water:</strong> {data.surface_water}%
+        <strong>Eau à la surface:</strong> {data.surface_water}%
       </p>
       <p>
         <strong>Terrain:</strong> {data.terrain}
@@ -50,7 +50,7 @@ function PlanetDetail({ data }) {
         {data?.films?.length > 0 ? (
           data.films.map((filmUrl, index) => <li key={index}>{filmUrl.split("/").slice(-2, -1)[0]}</li>)
         ) : (
-          <li>No films found</li>
+          <li>Aucun films trouvé</li>
         )}
       </ul>
     </div>

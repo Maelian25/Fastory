@@ -7,40 +7,40 @@ function CharacterDetail({ data }) {
       <h2 className="detail-title">{data?.name}</h2>
       <ul className="detail-list">
         <li>
-          <strong>Birth Year:</strong> {data?.birth_year || "Unknown"}
+          <strong>Année de naissance:</strong> {data?.birth_year || "Unknown"}
         </li>
         <li>
-          <strong>Eye Color:</strong> {data?.eye_color}
+          <strong>Couleur des yeux:</strong> {data?.eye_color}
         </li>
         <li>
-          <strong>Gender:</strong> {data?.gender}
+          <strong>Genre:</strong> {data?.gender}
         </li>
         <li>
-          <strong>Hair Color:</strong> {data?.hair_color}
+          <strong>Couleur de cheveux:</strong> {data?.hair_color}
         </li>
         <li>
-          <strong>Height:</strong> {data?.height} cm
+          <strong>Taille:</strong> {data?.height} cm
         </li>
         <li>
-          <strong>Mass:</strong> {data?.mass} kg
+          <strong>Poids:</strong> {data?.mass} kg
         </li>
         <li>
-          <strong>Skin Color:</strong> {data?.skin_color}
+          <strong>Couleur de peau:</strong> {data?.skin_color}
         </li>
         <li>
           <strong>Homeworld:</strong>{" "}
           <a href={data?.homeworld} target="_blank" rel="noopener noreferrer">
-            View Homeworld
+            Voir planète
           </a>
         </li>
         <li>
           <strong>Films:</strong>{" "}
-          {data?.films.length > 0 ? (
+          {data?.films?.length > 0 ? (
             <ul>
               {data.films.map((film, index) => (
                 <li key={index}>
                   <a href={film} target="_blank" rel="noopener noreferrer">
-                    View Film {index + 1}
+                    Voir Film {index + 1}
                   </a>
                 </li>
               ))}
@@ -50,10 +50,10 @@ function CharacterDetail({ data }) {
           )}
         </li>
         <li>
-          <strong>Starships:</strong> {data?.starships.length > 0 ? data.starships.join(", ") : "None"}
+          <strong>Fusée:</strong> {data?.starships?.length > 0 ? data.starships.join(", ") : "None"}
         </li>
         <li>
-          <strong>Vehicles:</strong> {data?.vehicles.length > 0 ? data.vehicles.join(", ") : "None"}
+          <strong>Véhicule:</strong> {data?.vehicles?.length > 0 ? data.vehicles.join(", ") : "None"}
         </li>
       </ul>
     </div>

@@ -11,14 +11,20 @@ const DetailPage = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://swapi.dev/api/${type}/${Number(id)}/`);
+        const response = await axios.get("http://localhost:3001/detail", {
+          params: { id: Number(id), type },
+          headers: { Authorization: `Bearer ${token}` },
+        });
+
+        console.log(response.data.data);
 
         if (response.data) {
-          setData(response.data);
+          setData(response.data.data);
         } else {
           setError("Aucun résultat trouvé.");
         }
@@ -30,7 +36,7 @@ const DetailPage = () => {
     };
 
     fetchData();
-  }, [type, id]);
+  }, [type, id, token]);
 
   if (loading) {
     return <p>Chargement...</p>;

@@ -6,4 +6,9 @@ module.exports = [
     path: "/search",
     handler: swapiController.search,
   },
+  {
+    method: "GET",
+    path: "/detail",
+    handler: swapiController.detail,
+  },
 ];
