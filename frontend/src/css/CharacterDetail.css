@@ -1,0 +1,30 @@
+/* src/components/CharacterDetail.css */
+.detail-title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.detail-list strong {
+  color: #555;
+}
+
+.detail-list a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.detail-list a:hover {
+  text-decoration: underline;
+}
