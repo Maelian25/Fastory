@@ -59,10 +59,7 @@ const DetailPage = () => {
     <div className="detail-page">
       <h1>Détails de {data?.name}</h1>
       <div className="detail-content">
-        <div className="detail-card">
-          <h2>{data?.name}</h2>
-          {DetailComponent ? <DetailComponent data={data} /> : <p>Unsupported type</p>}
-        </div>
+        <div className="detail-card">{DetailComponent ? <DetailComponent data={data} /> : <p>Unsupported type</p>}</div>
       </div>
     </div>
   );
