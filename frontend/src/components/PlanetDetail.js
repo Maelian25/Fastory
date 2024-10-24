@@ -15,13 +15,13 @@ function PlanetDetail({ data }) {
         <strong>Gravité:</strong> {data.gravity}
       </p>
       <p>
-        <strong>Période orbitale:</strong> {data.orbital_period} days
+        <strong>Période orbitale:</strong> {data.orbital_period} jours
       </p>
       <p>
         <strong>Population:</strong> {data.population}
       </p>
       <p>
-        <strong>Période de rotation:</strong> {data.rotation_period} hours
+        <strong>Période de rotation:</strong> {data.rotation_period} heures
       </p>
       <p>
         <strong>Eau à la surface:</strong> {data.surface_water}%
@@ -41,7 +41,7 @@ function PlanetDetail({ data }) {
             </li>
           ))
         ) : (
-          <li>No residents found</li>
+          <li>Aucun résident trouvé</li>
         )}
       </ul>
 
@@ -50,7 +50,7 @@ function PlanetDetail({ data }) {
         {data?.films?.length > 0 ? (
           data.films.map((filmUrl, index) => <li key={index}>{filmUrl.split("/").slice(-2, -1)[0]}</li>)
         ) : (
-          <li>Aucun films trouvé</li>
+          <li>Aucun film trouvé</li>
         )}
       </ul>
     </div>

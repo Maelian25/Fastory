@@ -15,7 +15,7 @@ function StarshipDetail({ data }) {
         <strong>Cout:</strong> {data.cost_in_credits}
       </p>
       <p>
-        <strong>Longueur:</strong> {data.length} meters
+        <strong>Longueur:</strong> {data.length} mètres
       </p>
       <p>
         <strong>Vitesse max:</strong> {data.max_atmosphering_speed} km/h
